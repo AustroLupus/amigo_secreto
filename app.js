@@ -2,3 +2,7 @@
 function agregarAmigo(){
     console.log("Agregar Amigo")
 }
+
+function sortearAmigo(){
+    console.log("Click en Sorteo")
+}
