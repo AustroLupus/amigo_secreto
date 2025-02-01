@@ -2,14 +2,27 @@
 let arrayNombres = []
 function agregarAmigo(){
     let nuevoNombre = document.getElementById("amigo").value;
-    console.log("Nuevo Nombre: " + nuevoNombre);
-    arrayNombres.push(nuevoNombre);
-    document.getElementById("amigo").value = "";
-    console.log(arrayNombres);
-    // Mostrando nombres en el listado
-    let li = document.createElement("li");
-    li.textContent=nuevoNombre;
-    document.getElementById("listaAmigos").appendChild(li);
+    if (nuevoNombre !== "" && esNombre(nuevoNombre)) {
+        console.log("Nuevo Nombre: " + nuevoNombre);
+        arrayNombres.push(nuevoNombre);
+        document.getElementById("amigo").value = "";
+        console.log(arrayNombres);
+        // Mostrando nombres en el listado
+        let li = document.createElement("li");
+        li.textContent=nuevoNombre;
+        document.getElementById("listaAmigos").appendChild(li);
+    } else {
+        alert("Debe indicar un nombre");
+    }
+
+}
+
+function esNombre(parseo){
+    let resultado = true;
+    if (parseo === "false") {
+        resultado = false;
+    }
+    return resultado;
 }
 
 function sortearAmigo(){
