@@ -11,6 +11,7 @@ function agregarAmigo(){
         let li = document.createElement("li");
         li.textContent=nuevoNombre;
         document.getElementById("listaAmigos").appendChild(li);
+        document.getElementById("amigo").focus() // devuelve el foco al campo input
     } else {
         alert("Debe indicar un nombre");
     }
