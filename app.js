@@ -3,11 +3,9 @@ let arrayNombres = []
 function agregarAmigo(){
     let nuevoNombre = document.getElementById("amigo").value;
     if (esNombre(nuevoNombre)) {
-        console.log("Nuevo Nombre: " + nuevoNombre);
         arrayNombres.push(nuevoNombre);
         document.getElementById("amigo").value = "";
-        console.log(arrayNombres);
-        // Mostrando nombres en el listado
+        // Crear un elemento li y mostrar nombres en el listado
         let li = document.createElement("li");
         li.textContent=nuevoNombre;
         document.getElementById("listaAmigos").appendChild(li);
@@ -25,8 +23,6 @@ function esNombre(nombre){
 function sortearAmigo(){
     if (arrayNombres.length > 0){
         let indiceAleatorio = Math.floor(Math.random() * arrayNombres.length);
-        console.log(indiceAleatorio);
-        console.log(arrayNombres[indiceAleatorio]);
         let li = document.createElement("li");
         li.textContent=arrayNombres[indiceAleatorio];
         document.getElementById("resultado").appendChild(li);
