@@ -31,7 +31,14 @@ function sortearAmigo(){
         li.textContent=arrayNombres[indiceAleatorio];
         document.getElementById("resultado").appendChild(li);
     } else {
-        alert("Debe por lo menos indicar un nombre");
+        alert("Debe por lo menos tener un nombre en el listado");
     }
 
 }
+
+//Capturar usar enter para presionar el botón agregar amigo
+document.getElementById("amigo").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        agregarAmigo();
+    }
+})
