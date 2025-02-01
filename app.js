@@ -22,7 +22,15 @@ function esNombre(nombre){
 }
 
 function sortearAmigo(){
-    let indiceAleatorio = Math.floor(Math.random() * arrayNombres.length);
-    console.log(indiceAleatorio);
-    console.log(arrayNombres[indiceAleatorio]);
+    if (arrayNombres.length > 0){
+        let indiceAleatorio = Math.floor(Math.random() * arrayNombres.length);
+        console.log(indiceAleatorio);
+        console.log(arrayNombres[indiceAleatorio]);
+        let li = document.createElement("li");
+        li.textContent=arrayNombres[indiceAleatorio];
+        document.getElementById("resultado").appendChild(li);
+    } else {
+        alert("Debe por lo menos indicar un nombre");
+    }
+
 }
