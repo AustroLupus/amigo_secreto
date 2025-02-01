@@ -2,7 +2,7 @@
 let arrayNombres = []
 function agregarAmigo(){
     let nuevoNombre = document.getElementById("amigo").value;
-    if (nuevoNombre !== "" && esNombre(nuevoNombre)) {
+    if (esNombre(nuevoNombre)) {
         console.log("Nuevo Nombre: " + nuevoNombre);
         arrayNombres.push(nuevoNombre);
         document.getElementById("amigo").value = "";
@@ -14,15 +14,11 @@ function agregarAmigo(){
     } else {
         alert("Debe indicar un nombre");
     }
-
 }
 
-function esNombre(parseo){
-    let resultado = true;
-    if (parseo === "false") {
-        resultado = false;
-    }
-    return resultado;
+function esNombre(nombre){
+    const regexNombre = /^(?=.*[a-zA-ZáéíóúÁÉÍÓÚñÑ])[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/; //Solo letra mayúscula o minúscula o espacio, pero no vacío tampoco solo espacios
+    return regexNombre.test(nombre);
 }
 
 function sortearAmigo(){
