@@ -2,13 +2,13 @@
 let arrayNombres = []
 function agregarAmigo(){
     let nuevoNombre = document.getElementById("amigo").value;
-    if (esNombre(nuevoNombre)) {
+    if (esNombre(nuevoNombre)) { // Validación si el campo está vacío ocurre en la función esNombre()
         arrayNombres.push(nuevoNombre);
-        document.getElementById("amigo").value = "";
+        document.getElementById("amigo").value = ""; // limpia en campo input
         // Crear un elemento li y mostrar nombres en el listado
-        let li = document.createElement("li");
-        li.textContent=nuevoNombre;
-        document.getElementById("listaAmigos").appendChild(li);
+        let liEtiqueta = document.createElement("li");
+        liEtiqueta.textContent=nuevoNombre;
+        document.getElementById("listaAmigos").appendChild(liEtiqueta);
         document.getElementById("amigo").focus() // devuelve el foco al campo input
     } else {
         alert("Debe indicar un nombre");
@@ -21,11 +21,11 @@ function esNombre(nombre){
 }
 
 function sortearAmigo(){
-    if (arrayNombres.length > 0){
-        let indiceAleatorio = Math.floor(Math.random() * arrayNombres.length);
-        let li = document.createElement("li");
-        li.textContent=arrayNombres[indiceAleatorio];
-        document.getElementById("resultado").appendChild(li);
+    if (arrayNombres.length > 0){ //verifica que el arreglo no esté vacío
+        let indiceAleatorio = Math.floor(Math.random() * arrayNombres.length); // Elige número aleatorio ente 0 y largo del arreglo - 1
+        let liSorteado = document.createElement("li");
+        liSorteado.textContent=arrayNombres[indiceAleatorio];
+        document.getElementById("resultado").appendChild(liSorteado);
     } else {
         alert("Debe por lo menos tener un nombre en el listado");
     }
