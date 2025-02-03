@@ -27,7 +27,7 @@ tener espacio después del primer carácter (como en el caso del nombre "*María
 Al equipo de Alura LATAM y a OracleONE 
 
 ### Herramientas utilizadas
-- JetBrain WebStorm
+- JetBrains WebStorm
 - Microsoft GitHub
 
 #### Versiones
