@@ -19,4 +19,13 @@ function esNombre(nombre){
     return regexNombre.test(nombre);
 }
 ```
-En su primera sección, RegEx verifica que la cadena ingresada tenga por lo menos un PDTE CONTINUAR
+En su primera mitad de la condición de RegEx se verifica que la cadena ingresada no esté vacía ni tampoco sean solo
+espacios vacíos. En conjunto con la otra mitad verifican que solo contenga letras, y puede
+tener espacio después del primer carácter (como en el caso del nombre "*María Joaquina*" o "*Juan Pablo*")
+
+### Agradecimientos
+Al equipo de Alura LATAM y a OracleONE 
+
+### Herramientas utilizadas
+- JetBrain WebStorm
+- Microsoft GitHub
