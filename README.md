@@ -29,3 +29,7 @@ Al equipo de Alura LATAM y a OracleONE
 ### Herramientas utilizadas
 - JetBrain WebStorm
 - Microsoft GitHub
+
+#### Versiones
+- 0.1 versión inicial
+- 0.1.1 refactorización 
